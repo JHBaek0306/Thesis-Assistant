@@ -6,20 +6,11 @@ A web-based application that helps users analyze academic papers using AI. The a
 
 - PDF Document Processing
   - Upload and process academic papers in PDF format
-  - Automatic text extraction with OCR support for image-based PDFs
   - Document vectorization for semantic search
   
-- AI-Powered Analysis
+- Analysis
   - Generate summaries of uploaded papers
   - Ask questions about paper content
-  - Semantic search across uploaded documents
-  - Uses DeepSeek-r1:8b model through Ollama for advanced language understanding
-  
-- User Interface
-  - Modern React-based frontend
-  - Drag-and-drop file upload
-  - Real-time question answering
-  - Paper management with delete functionality
 
 ## Technical Stack
 
@@ -32,8 +23,6 @@ A web-based application that helps users analyze academic papers using AI. The a
 
 ### Frontend
 - React with TypeScript
-- Material-UI components
-- Axios for API communication
 
 ## Setup Instructions
 
@@ -73,20 +62,11 @@ A web-based application that helps users analyze academic papers using AI. The a
    ```bash
    npm start
    ```
-
-## Usage
-
-1. Access the application at `http://localhost:3000`
-2. Upload PDF documents using the drag-and-drop interface
-3. View uploaded papers in the papers list
-4. Ask questions about the papers using the question input field
-5. Delete papers using the delete button when needed
-
+   
 ## Notes
 
-- The system uses Ollama's DeepSeek-r1:8b model for text generation
-- OCR functionality is available for image-based PDFs
-- All AI thinking processes are logged in `backend/logs/thinking_process.log`
+- The system uses Ollama's DeepSeek-r1:8b model for text generation and can change the model
+- Should download Ollma's local model
 - Maximum context length is limited to 1500 characters for optimal performance
 
 ## Architecture
@@ -99,26 +79,3 @@ The application follows a client-server architecture:
   - Vector embeddings generation using Sentence Transformers
   - Semantic search using ChromaDB
   - Question answering using Ollama's DeepSeek model
-
-## Development
-
-### Adding New Features
-1. Implement backend functionality in the appropriate Python modules
-2. Create or update API endpoints in `main.py`
-3. Implement frontend components and connect them to the API
-
-### Testing
-- Backend tests can be run with:
-  ```
-  cd backend
-  pytest
-  ```
-- Frontend tests can be run with:
-  ```
-  cd frontend
-  npm test
-  ```
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details. 
