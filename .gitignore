@@ -1,0 +1,14 @@
+# Ignore directories
+logs/
+models/
+uploads/
+vector_db/
+__pycache__/
+*/__pycache__/
+*.py[cod]
+
+# Ignore all files in these directories
+logs/*
+models/*
+uploads/*
+vector_db/* 
